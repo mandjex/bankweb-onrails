@@ -7,15 +7,16 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 
-gem 'rake', '0.8.7'
+#gem 'rake', '0.8.7'
 
 group :development do 
   gem 'rspec-rails'
   gem 'faker'
+  gem "annotate", "~> 2.4.0"
 end
 
 group :test do
-  gem 'rspec'
+  gem 'rspec-rails'
   gem 'webrat'
   gem 'factory_girl_rails'
 end
