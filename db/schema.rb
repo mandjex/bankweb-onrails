@@ -20,13 +20,14 @@ ActiveRecord::Schema.define(:version => 20110703124049) do
   end
 
   create_table "clients", :force => true do |t|
-    t.string   "first_name",     :limit => 50,  :null => false
-    t.string   "last_name",      :limit => 50,  :null => false
-    t.string   "gender"
-    t.string   "street",         :limit => 50,  :null => false
-    t.integer  "postal_code",    :limit => 4,   :null => false
-    t.string   "city",           :limit => 100, :null => false
-    t.decimal  "account_number"
+    t.integer  "account_number"
+    t.string   "first_name",     :limit => 50, :null => false
+    t.string   "last_name",      :limit => 50, :null => false
+    t.string   "gender",         :limit => 2,  :null => false
+    t.string   "street_number",  :limit => 4,  :null => false
+    t.string   "street_name",    :limit => 50, :null => false
+    t.integer  "postal_code",    :limit => 4,  :null => false
+    t.string   "city",           :limit => 50, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

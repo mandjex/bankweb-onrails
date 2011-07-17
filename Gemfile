@@ -7,12 +7,11 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 
-#gem 'rake', '0.8.7'
-
 group :development do 
   gem 'rspec-rails'
   gem 'faker'
-  gem "annotate", "~> 2.4.0"
+  gem 'annotate', "~> 2.4.0"
+  gem 'formtastic', '~> 1.2.3'
 end
 
 group :test do

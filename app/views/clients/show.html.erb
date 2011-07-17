@@ -1,23 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Gender:</b>
-  <%= @client.gender %>
-</p>
-
-<p>
-  <b>Firstname:</b>
-  <%= @client.firstname %>
-</p>
-
-<p>
-  <b>Lastname:</b>
-  <%= @client.lastname %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @client.address %>
+  <% if @client.gender.eql?("M")  %>
+  M. <% else %> Ms <% end %>
+  <%= @client.first_name %>
+  <%= @client.last_name %>
+  -
+  <%= @client.street_number %>,
+  <%= @client.street_name %>
+  <%= @client.postal_code %>
+  <%= @client.city %>
 </p>
 
 

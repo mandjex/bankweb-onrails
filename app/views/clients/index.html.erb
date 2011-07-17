@@ -14,9 +14,12 @@
 <% @clients.each do |client| %>
   <tr>
     <td><%= client.gender %></td>
-    <td><%= client.firstname %></td>
-    <td><%= client.lastname %></td>
-    <td><%= client.address %></td>
+    <td><%= client.first_name %></td>
+    <td><%= client.last_name %></td>
+    <td><%= client.street_number %></td>
+    <td><%= client.street_name %></td>
+    <td><%= client.postal_code %></td>
+    <td><%= client.city %></td>
     <td><%= link_to 'Show', client %></td>
     <td><%= link_to 'Edit', edit_client_path(client) %></td>
     <td><%= link_to 'Destroy', client, :confirm => 'Are you sure?', :method => :delete %></td>
