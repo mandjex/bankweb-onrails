@@ -1,8 +1,7 @@
 BankwebOnrails::Application.routes.draw do
-  resources :transactions
 
+  resources :operations
   resources :accounts
-
   resources :clients
 
   # The priority is based upon order of creation:

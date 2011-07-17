@@ -6,8 +6,7 @@ class CreateOperations < ActiveRecord::Migration
       t.decimal :old_balance,   :null => false, :precision => 10, :scale => 2
       t.decimal :new_balance,   :null => false, :precision => 10, :scale => 2
       t.string :ope_type,       :null => false, :limit => 1
-      t.date :ope_date
-      t.time :ope_time
+      t.datetime :ope_date
 
       t.timestamps
     end

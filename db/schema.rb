@@ -14,29 +14,30 @@ ActiveRecord::Schema.define(:version => 20110703124049) do
 
   create_table "accounts", :force => true do |t|
     t.integer  "number"
-    t.decimal  "balance",    :precision => 10, :scale => 2, :default => 0.0
+    t.decimal  "balance",    :precision => 10, :scale => 2, :default => 0.0, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "clients", :force => true do |t|
-    t.boolean  "gender"
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "address"
-    t.integer  "account_number"
+    t.string   "first_name",     :limit => 50,  :null => false
+    t.string   "last_name",      :limit => 50,  :null => false
+    t.string   "gender"
+    t.string   "street",         :limit => 50,  :null => false
+    t.integer  "postal_code",    :limit => 4,   :null => false
+    t.string   "city",           :limit => 100, :null => false
+    t.decimal  "account_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "operations", :force => true do |t|
     t.integer  "account_number"
-    t.decimal  "value"
-    t.decimal  "old_balance"
-    t.decimal  "new_balance"
-    t.string   "ope_type"
-    t.date     "ope_date"
-    t.time     "ope_time"
+    t.decimal  "value",                       :precision => 10, :scale => 2, :null => false
+    t.decimal  "old_balance",                 :precision => 10, :scale => 2, :null => false
+    t.decimal  "new_balance",                 :precision => 10, :scale => 2, :null => false
+    t.string   "ope_type",       :limit => 1,                                :null => false
+    t.datetime "ope_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
