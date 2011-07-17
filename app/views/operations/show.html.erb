@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Account number:</b>
+  <%= @operation.account_number %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%= @operation.value %>
+</p>
+
+<p>
+  <b>Old balance:</b>
+  <%= @operation.old_balance %>
+</p>
+
+<p>
+  <b>New balance:</b>
+  <%= @operation.new_balance %>
+</p>
+
+<p>
+  <b>Ope type:</b>
+  <%= @operation.ope_type %>
+</p>
+
+<p>
+  <b>Ope date:</b>
+  <%= @operation.ope_date %>
+</p>
+
+<p>
+  <b>Ope time:</b>
+  <%= @operation.ope_time %>
+</p>
+
+
+<%= link_to 'Edit', edit_operation_path(@operation) %> |
+<%= link_to 'Back', operations_path %>
